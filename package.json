@@ -1,0 +1,21 @@
+{
+  "name": "ecommerce-backend-dev-api",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nayemuddinn/Ecommerce-Backend-Dev-API.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/nayemuddinn/Ecommerce-Backend-Dev-API/issues"
+  },
+  "homepage": "https://github.com/nayemuddinn/Ecommerce-Backend-Dev-API#readme"
+}
