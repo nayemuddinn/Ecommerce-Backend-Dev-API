@@ -1,7 +1,16 @@
-
+const User = require('../db/models/user')
+const { StatusCodes } = require('http-status-codes')
 
 const register = async (req, res) => {
-    res.status(201).json({ "ok": 1 })
+    const { email } = req.body;
+
+    const duplicateEmail = await User.findOne({ email })
+    if (duplicateEmail)
+        throw new CustomError.BadrequestError('Email Already Exist')
+
+    const user = await User.Create(req.body)
+    res.status(StatusCodes.CREATED).json({ user })
+
 }
 
 
