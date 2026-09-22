@@ -7,8 +7,6 @@ const dbConnection = require('./db/connection/connect')
 const PORT = process.env.PORT
 
 
-
-
 //  routers
 const authRouter = require('./routes/authRoutes');
 const userRouter = require('./routes/userRoutes');
