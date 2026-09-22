@@ -1,7 +1,7 @@
 const User = require('../db/models/user')
 const { StatusCodes } = require('http-status-codes')
 const customErr = require('../errors')
-const  createTokenUser  = require('../utils/createTokenUser')
+const { createTokenUser } = require('../utils')
 
 const register = async (req, res) => {
     const { email, name, password } = req.body;
