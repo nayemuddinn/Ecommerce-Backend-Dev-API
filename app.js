@@ -2,6 +2,9 @@ const express = require('express')
 const app = express();
 require('dotenv').config();
 
+const errorHandler = require('./middleware/error-handler/error-handler')
+const notFound = require('./middleware/no-route-found')
+
 
 const dbConnection = require('./db/connection/connect')
 const PORT = process.env.PORT
@@ -21,6 +24,9 @@ app.use('/api/v1/users', userRouter);
 app.use('/api/v1/products', productRouter);
 app.use('/api/v1/reviews', reviewRouter);
 app.use('/api/v1/orders', orderRouter);
+
+app.use(errorHandler)
+app.use(notFound)
 
 
 const start = () => {
